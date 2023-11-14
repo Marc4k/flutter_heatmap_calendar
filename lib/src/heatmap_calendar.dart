@@ -42,6 +42,9 @@ class HeatMapCalendar extends StatefulWidget {
   /// The text color value of week labels.
   final Color? weekTextColor;
 
+  /// The text color value of the month label.
+  final Color? monthTextColor;
+
   /// Make block size flexible if value is true.
   ///
   /// Default value is false.
@@ -97,6 +100,7 @@ class HeatMapCalendar extends StatefulWidget {
     this.size = 42,
     this.fontSize,
     this.monthFontSize,
+    this.monthTextColor,
     this.textColor,
     this.weekFontSize,
     this.weekTextColor,
@@ -159,6 +163,7 @@ class _HeatMapCalendar extends State<HeatMapCalendar> {
               (_currentDate?.year).toString(),
           style: TextStyle(
             fontSize: widget.monthFontSize ?? 12,
+            color: widget.monthTextColor ?? Colors.black,
           ),
         ),
 
